@@ -1,0 +1,90 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<style type="text/css">
+#wassim {
+width:400px;
+height:300px;
+margin-left:0px;
+transition:width 1s, height 1s;
+}
+#wassim:hover {
+width:800px;
+height:600px;
+}
+</style>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+   <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Name', 'Score'],
+          ['Wassim',     7],
+          ['Monder',      5],
+          ['Azeez',  3],
+          ['Saleh', 4],
+          ['Shadi',    6]
+        ]);
+
+        var options = {
+          legend: 'none',
+        pieSliceText: 'none',
+	backgroundColor: '#eee',
+	is3D: true,
+	tooltip : {text : 'percentage'},
+	chartArea : {width:'100%', height:'100%'}
+
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+
+<title>My fancy site</title>
+</head>
+<body style="margin:5px;">
+	<div class="modal hide fade" id="myModal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+			<h3>Contact Me</h3>
+		</div>
+		<div class="modal-body">
+			<table style='width:100%;'>
+				<tr><td>Name : </td><td><input type='text' class='form-control' style='width:100%;height:27px;' /></td></tr>
+				<tr><td>Title : </td><td><input type='text' class='form-control' style='width:100%;height:27px;' /></td></tr>
+				<tr><td>Body : </td><td><textarea class='form-control' rows="5" cols="20" style='width:100%;'></textarea></td></tr>
+				<tr><td colspan="2"><button class="btn btn-primary">Send</button></td></tr>
+			</table>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" data-dismiss="modal" data-target="#myModal">Close</a>
+		</div>
+	</div>
+	<div style="background:#eee;height:100%;">
+		<div class="btn-group" style="width:100% !important;">
+			<button class="btn" style="width:25% !important;" onclick="window.location.href='index.html';">Home</button>
+			<button class="btn" style="width:25% !important;" onclick="window.location.href='http://google.com/';">Go to Google!</button>
+			<button class="btn" style="width:25% !important;" onclick="window.location.href='http://github.com/bahjat13-meet/';">Github Projects</button>
+			<button class="btn" style="width:25% !important;" data-toggle="modal" data-target="#myModal">Contact Me</button>
+		</div>
+		<br><br>
+		<table><tr><td valign="top">
+		<p style="font-size:180%;">
+			<span style="font-weight:bold; color:red;">Hello!</span> Welcome to Bahjat's new fancy website.<br><br>
+			I'm excited for this year's <span style="color:blue;">MEET</span> program. Miss you all!<br><br>
+		</p>
+		<img src="images/wassim.jpg" id="wassim" /><br>
+		<span style="color:gray;font-style: italic;">This is my friend Wassim</span>
+		</td><td valign="top">
+		<div id="piechart" style="width: 400px; height: 400px;"></div>
+		</td></tr></table>
+	</div>
+</body>
+</html>
