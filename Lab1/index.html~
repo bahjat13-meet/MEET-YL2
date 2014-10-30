@@ -82,7 +82,7 @@ height:600px;
 		</p>
 		<img src="images/wassim.jpg" id="wassim" /><br>
 		<span style="color:gray;font-style: italic;">This is my friend Wassim</span>
-		</td><td valign="top">
+		</td><td valign="top"><br><br>
 		<div id="piechart" style="width: 400px; height: 400px;"></div>
 		</td></tr></table>
 	</div>
