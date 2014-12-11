@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<script type="text/javascript">
+function showModal(sender) {
+	document.getElementById("modal").src=sender.src;
+	document.getElementById("modal").style.display="block";
+}
+function hideModal() {
+	document.getElementById("modal").style.display="none";
+}
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Art Gallery</title>
+</head>
+<body>
+	<!-- MODAL -->
+	<img src="" id="modal" onclick="hideModal()" alt="Click to close" title="Click to close" />
+
+	<!-- HEADER -->
+	<div id="header">
+		<h1>About Me</h1>
+	</div>
+
+	<!-- CONTENT -->
+	<div id="content">
+		<p>My Name is Bahjat Kawar, I'm 15 years old, and I'm a fan of art.<br>
+		I'm a professional programmer, and while I'm not so good at drawing, I enjoy it.<br>
+		That's why I made this website to showcase some great drawings.<br>
+		At the website's homepage you can browse through the featured drawings, click images to enlarge them, and click the large image to go back to the main screen.</p>
+	</div>
+
+	<!-- FOOTER -->
+	<div id="footer">
+		<p><a href="/">Home</a></p>
+	</div>
+
+</body>
+</html>
